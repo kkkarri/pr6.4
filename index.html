@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логін, реєстрація та кнопка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1 id="pageTitle">Виберіть спосіб входу</h1>
+    <div id="authOptions">
+        <button onclick="showRegisterForm()">Реєстрація</button>
+        <button onclick="showLoginForm()">Логін</button>
+    </div>
+
+    <div id="registerForm" style="display: none;">
+        <h2>Реєстрація</h2>
+        <form>
+            <label for="username">Ім'я користувача:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" onclick="register()">Зареєструватися</button>
+        </form>
+    </div>
+
+    <div id="loginForm" style="display: none;">
+        <h2>Логін</h2>
+        <form>
+            <label for="loginUsername">Ім'я користувача:</label>
+            <input type="text" id="loginUsername" name="loginUsername" required>
+
+            <label for="loginPassword">Пароль:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+
+            <button type="button" onclick="login()">Увійти</button>
+        </form>
+    </div>
+
+    <div id="movingButtonArea" style="display: none;">
+        <h2>Привіт, <span id="userDisplayName"></span>!</h2>
+        <button onclick="logout()">Вийти</button>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
